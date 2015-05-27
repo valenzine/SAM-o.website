@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SAM-o</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+</head>
+<body>
+
+	<header id="welcome" class="panel">
+		<div class="container">
+			<div class="row">
+				<div class="seven columns u-pull-right">
+						<img src="img/main-01.jpg" class="main" alt="SAM-o">
+				</div>
+				<div class="five columns u-pull-right">
+					<h1 class="logo">SAM-o</h1>
+					<h2>The app with hundreds of thousands of faces in your pocket.</h2>
+					<div class="break"></div>
+					<h3>SAM-o is an awesome new app for managing your digital imaginary friends.</h3>
+					<ul id="download">
+						<li><a href="#" class="ios">Download on the App Store</a></li>
+						<li><a href="#" class="android">Get it on Play Store</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</header>
+	<section id="about" class="panel">
+		<div class="container">
+			<div class="row">
+				<div class="seven columns">
+					<img src="img/main-02.jpg" class="about" alt="SAM-o">
+				</div>
+				<div class="five columns">
+					<h2>The app with hundreds of thousands of faces in your pocket.</h2>
+					<h3>Meditation umami wayfarers Echo Park. Roof party Pinterest twee, messenger bag yr fap iPhone artisan. Lumbersexual chillwave drinking vinegar, Intelligentsia tofu gentrify craft beer swag locavore four loko retro Bushwick cred. Artisan dreamcatcher Helvetica cray, quinoa Schlitz squid try-hard PBR American Apparel.</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="samples" class="panel">
+	</section>
+	<section id="video" class="panel">
+		<div class="size verticalalign">
+			<div class="videoWrapper">
+				<iframe width="1254" height="705" src="https://www.youtube-nocookie.com/embed/DjjkAYI5kNM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+	<footer id="footer" class="panel">
+		<div class="container">
+			<div class="row">
+				<div class="break"></div>
+				<h1 class="logo">SAM-o</h1>
+				<h2>@SAMOAPP</h2>
+				<h3>Created with love in Buenos Aires, Argentina.</h3>
+			</div>
+		</div>
+	</footer>
+
+	
+</body>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.panelSnap.js"></script>
+<script>
+jQuery(function($) {
+	var options = {
+		panelSelector: '.panel',
+		keyboardNavigation: {
+			enabled: true,
+			wrapAround: false
+		}
+	};
+	$('body').panelSnap(options);
+});
+</script>
+</html>
