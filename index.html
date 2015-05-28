@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>SAM-o</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -10,7 +11,9 @@
 </head>
 <body>
 
-	<header id="welcome" class="panel">
+<div id="fullpage">
+
+	<section id="welcome" class="panel">
 		<div class="container">
 			<div class="row">
 				<div class="seven columns u-pull-right">
@@ -29,30 +32,30 @@
 
 			</div>
 		</div>
-	</header>
-	<section id="about">
+	</section>
+	<section id="about" class="panel">
 		<div class="container">
 			<div class="row">
-				<div class="seven columns panel">
+				<div class="seven columns">
 					<img src="img/main-02.jpg" class="about" alt="SAM-o">
 				</div>
-				<div class="five columns panel">
+				<div class="five columns">
 					<h2>The app with hundreds of thousands of faces in your pocket.</h2>
 					<p>Meditation umami wayfarers Echo Park. Roof party Pinterest twee, messenger bag yr fap iPhone artisan. Lumbersexual chillwave drinking vinegar, Intelligentsia tofu gentrify craft beer swag locavore four loko retro Bushwick cred. Artisan dreamcatcher Helvetica cray, quinoa Schlitz squid try-hard PBR American Apparel.</p>
 				</div>
 			</div>
 		</div>
 	</section>
+	<section id="crap" class="panel">
+	</section>
 	<section id="samples" class="panel">
 	</section>
 	<section id="video" class="panel">
-		<div class="size verticalalign">
-			<div class="videoWrapper">
-				<iframe width="1254" height="705" src="https://www.youtube-nocookie.com/embed/DjjkAYI5kNM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-			</div>
+		<div class="videoWrapper verticalalign">
+			<iframe width="1254" height="705" src="https://www.youtube-nocookie.com/embed/DjjkAYI5kNM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</section>
-	<footer id="footer" class="panel">
+	<section id="footer" class="panel">
 		<div class="container">
 			<div class="row">
 				<div class="break"></div>
@@ -61,19 +64,50 @@
 				<h3>Created with love in Buenos Aires, Argentina.</h3>
 			</div>
 		</div>
-	</footer>
+	</section>
 
-	
+</div>
 </body>
-<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('body').fullpage({
-			sectionSelector: 'section',
-			fixedElements: 'header, footer',
+		$.breakpoint({
+			condition: function () {
+				return window.matchMedia('(min-width:750px)').matches;
+			},
+			first_enter: function () {
+				// Code will run the first time condition() is true.
+				// Here, you might create elements to use in
+				// your enter and exit methods.
+			},
+			enter: function () {
+				// Code will run whenever condition() becomes true.
+				$('#crap').remove();
+				$.fn.fullpage.destroy('all');
+				$('#fullpage').fullpage({
+					sectionSelector: '.panel',
+					//responsive: 900
+				});
+			},
+			exit: function () {
+				$('#about').after('<section id="crap" class="panel"></section>');
+				$.fn.fullpage.destroy('all');
+				$('#fullpage').fullpage({
+					sectionSelector: '.panel',
+					//responsive: 900
+				});
+				// Code will run whenever condition() becomes false
+				// (if it was previously true).
+				// This is where you revert the things you do in the
+				// enter method.
+			}
+		});
+		$('#fullpage').fullpage({
+			sectionSelector: '.panel',
+			//responsive: 900
 		});
 	});
-</script> -->
+</script>
 </html>
