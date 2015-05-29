@@ -61,10 +61,14 @@
 	<section id="footer" class="panel">
 		<div class="container">
 			<div class="row">
-				<div class="break"></div>
-				<h1 class="logo">SAM-o</h1>
-				<h2>@SAMOAPP</h2>
-				<h3>Created with love in Buenos Aires, Argentina.</h3>
+				<div class="u-full-width columns">
+					<div class="inner verticalalign">
+						<div class="break"></div>
+						<h1 class="logo">SAM-o</h1>
+						<h2>@SAMOAPP</h2>
+						<h3>Created with love in Buenos Aires, Argentina.</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -82,7 +86,7 @@
 		$('.columns').css('height', window.innerHeight+'px');
 		$.breakpoint({
 			condition: function () {
-				return window.matchMedia('(min-width:750px)').matches;
+				return window.matchMedia('(min-width:550px)').matches;
 			},
 			first_enter: function () {
 				// Code will run the first time condition() is true.

@@ -85,7 +85,7 @@ body {
 
 img {max-width: 100%;}
 
-ul#download {margin: 0;overflow: hidden;/* padding: 0; */}
+#download {margin: 0;overflow: hidden;/* padding: 0; */}
 
 #download li {
 float: left;
@@ -108,6 +108,7 @@ display: block;
 
 #download li a {margin: auto;background-size: contain;max-width: 100%;}
 
+#welcome .seven {}
 #welcome .seven {display: none;}
 
 #samples {
@@ -311,8 +312,18 @@ h3 {
 	#footer h1,
 	#footer h2,
 	#footer h3 {text-align:center}
+
+	#welcome h3 {font-size: 1.5rem;}
+
+	#about h2 {font-size: 1.5rem;text-align: center;}
+	#about h3 {/* width: 630px; */}
+	#about p {font-size: 1.3rem;}
 }
 
+@media (min-width: 700px) {
+
+	#about h2 {font-size:3rem}
+}
 p {
   margin-top: 0; }
 
@@ -618,7 +629,13 @@ there.
 /* Larger than mobile */
 @media (min-width: 400px) {
 
-	h1.logo {margin:3% auto}
+	h1.logo {margin-bottom: 5%;}
+
+	#welcome h2 {
+    font-size: 1.8rem;
+    margin: 0 auto;
+}
+	#welcome h3 {}
 	
 }
 
@@ -626,13 +643,13 @@ there.
 @media (min-width: 550px) {
 	h1.logo {width: 623px;}
 
-	#welcome h3 {width: 580px;}
 
-	ul#download {margin-top: 10%;}
+
+	ul#download {margin: 5% 0;}
 
 	#download li {float: left;text-indent: -999em;margin-right: 4%;}
 	#download li:last-child {margin:0}
-	#download li a {max-height: 45px;}
+	#download li a {max-height: 28px;}
 
 	a.ios {width: 203px;height: 60px;background: url('../img/download-ios.png') no-repeat;display: block;}
 
@@ -640,17 +657,13 @@ there.
 
 	#welcome .seven {display: block;}
 
-	#about h2 {font-size: 3rem;text-align: center;}
 
-	#about h3 {/* width: 630px; */}
 
 	section,
 	footer,
 	header {height: 100vh;}
 
-	.break {margin: 10% auto;}
-
-	#about p {font-size:1.8rem}
+	#footer .break {margin: 0 auto 7%;}
 
 	#footer {text-align:center}
 }
@@ -661,10 +674,23 @@ there.
 	
 }
 
+@media (min-width: 750px) and (orientation: portrait) {
+	section#crap {display: none;}
+	
+}
+
 /* Larger than desktop */
 @media (min-width: 1000px) {
 
 	.size {max-width: 65%;}
+	h1.logo {height:186px;}
+
+	#about h2,
+	#welcome h2 {font-size:3rem}
+	#about p,
+	#welcome h3 {font-size:2rem;margin:7% 0}
+
+	#download li a { max-height: none;}
 
 
 }
