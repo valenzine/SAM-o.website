@@ -17,19 +17,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="seven columns u-pull-right">
-						<img src="img/main-01.jpg" class="main" alt="SAM-o">
+					<img src="img/main-01.jpg" class="main verticalalign" alt="SAM-o">
 				</div>
 				<div class="five columns u-pull-right">
-					<h1 class="logo">SAM-o</h1>
-					<h2>The app with hundreds of thousands of faces in your pocket.</h2>
-					<div class="break"></div>
-					<h3>SAM-o is an awesome new app for managing your digital imaginary friends.</h3>
-					<ul id="download">
-						<li><a href="#" class="ios">Download on the App Store</a></li>
-						<li><a href="#" class="android">Get it on Play Store</a></li>
-					</ul>
+					<div class="inner verticalalign">
+						<h1 class="logo">SAM-o</h1>
+						<h2>The app with hundreds of thousands of faces in your pocket.</h2>
+						<div class="break"></div>
+						<h3>SAM-o is an awesome new app for managing your digital imaginary friends.</h3>
+						<ul id="download">
+							<li><a href="#" class="ios">Download on the App Store</a></li>
+							<li><a href="#" class="android">Get it on Play Store</a></li>
+						</ul>
+					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
@@ -37,11 +38,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="seven columns">
-					<img src="img/main-02.jpg" class="about" alt="SAM-o">
+					<img src="img/main-02.jpg" class="about verticalalign" alt="SAM-o">
 				</div>
 				<div class="five columns">
-					<h2>The app with hundreds of thousands of faces in your pocket.</h2>
-					<p>Meditation umami wayfarers Echo Park. Roof party Pinterest twee, messenger bag yr fap iPhone artisan. Lumbersexual chillwave drinking vinegar, Intelligentsia tofu gentrify craft beer swag locavore four loko retro Bushwick cred. Artisan dreamcatcher Helvetica cray, quinoa Schlitz squid try-hard PBR American Apparel.</p>
+					<div class="inner verticalalign">
+						<h2>The app with hundreds of thousands of faces in your pocket.</h2>
+						<p>Meditation umami wayfarers Echo Park. Roof party Pinterest twee, messenger bag yr fap iPhone artisan. Lumbersexual chillwave drinking vinegar, Intelligentsia tofu gentrify craft beer swag locavore four loko retro Bushwick cred. Artisan dreamcatcher Helvetica cray, quinoa Schlitz squid try-hard PBR American Apparel.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -73,6 +76,10 @@
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
+		$( window ).resize(function() {
+			$('.columns').css('height', window.innerHeight+'px');
+		});
+		$('.columns').css('height', window.innerHeight+'px');
 		$.breakpoint({
 			condition: function () {
 				return window.matchMedia('(min-width:750px)').matches;
@@ -95,8 +102,7 @@
 				$('#about').after('<section id="crap" class="panel"></section>');
 				$.fn.fullpage.destroy('all');
 				$('#fullpage').fullpage({
-					sectionSelector: '.panel',
-					//responsive: 900
+					sectionSelector: '.panel'
 				});
 				// Code will run whenever condition() becomes false
 				// (if it was previously true).
@@ -105,9 +111,9 @@
 			}
 		});
 		$('#fullpage').fullpage({
-			sectionSelector: '.panel',
-			//responsive: 900
+			sectionSelector: '.panel'
 		});
+		
 	});
 </script>
 </html>
