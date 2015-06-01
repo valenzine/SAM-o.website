@@ -53,6 +53,17 @@
 	</section>
 	<section id="samples" class="panel">
 	</section>
+	<section id="gallery" class="panel">
+		<div id="info"></div>
+		<div class="inner">
+			<div class="slide slide-01"></div>
+			<div class="slide slide-02"></div>
+			<div class="slide slide-03"></div>
+			<div class="slide slide-04"></div>
+			<div class="slide slide-05"></div>
+			<div class="slide slide-06"></div>
+		</div>
+	</section>
 	<section id="video" class="panel">
 		<div class="inner verticalalign">
 			<div class="videoWrapper">
@@ -82,43 +93,45 @@
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
+
+		function init() {
+			$('#fullpage').fullpage({
+				sectionSelector: '.panel',
+				slideSelector: '.slide',
+				/*onLeave: function(index, nextIndex, direction){
+					var leavingSection = $(this);
+
+					//after leaving section 2
+					if(index == 3 && direction =='down'){
+						setTimeout(function() { $("#info").fadeOut(); }, 3000);
+					}
+				}*/
+			});
+		};
+		
 		$( window ).resize(function() {
-			$('.columns').css('height', window.innerHeight+'px');
+			$('.columns,.panel').css('height', window.innerHeight+'px');
 		});
-		$('.columns').css('height', window.innerHeight+'px');
+		
+		$('.columns,.panel').css('height', window.innerHeight+'px');
 		$.breakpoint({
 			condition: function () {
 				return window.matchMedia('(min-width:550px)').matches;
 			},
-			first_enter: function () {
-				// Code will run the first time condition() is true.
-				// Here, you might create elements to use in
-				// your enter and exit methods.
-			},
+			first_enter: function () {},
 			enter: function () {
-				// Code will run whenever condition() becomes true.
 				$('#crap').remove();
 				$.fn.fullpage.destroy('all');
-				$('#fullpage').fullpage({
-					sectionSelector: '.panel',
-					//responsive: 900
-				});
+				init();
 			},
 			exit: function () {
 				$('#about').after('<section id="crap" class="panel"></section>');
 				$.fn.fullpage.destroy('all');
-				$('#fullpage').fullpage({
-					sectionSelector: '.panel'
-				});
-				// Code will run whenever condition() becomes false
-				// (if it was previously true).
-				// This is where you revert the things you do in the
-				// enter method.
+				init();
 			}
 		});
-		$('#fullpage').fullpage({
-			sectionSelector: '.panel'
-		});
+
+		init();
 		
 	});
 </script>

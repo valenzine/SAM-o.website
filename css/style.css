@@ -74,7 +74,7 @@ body {
 	-webkit-font-variant-ligatures: no-common-ligatures;
 	font-variant-ligatures: no-common-ligatures;}
 
-.panel {clear: both;height: 100vh;/* overflow: hidden; */}
+.panel {clear: both;height: 100vh;/* overflow: hidden; */position: relative;}
 
 .break {
     border: 4px solid;
@@ -296,6 +296,16 @@ h3 {
 	font-weight: 700;
     line-height: 125%;
     text-align: center;
+}
+#about p {
+    font-size: 1.6rem;
+    line-height: 150%;
+    text-align: center;
+    margin: auto;
+}
+
+#about h2 {
+    font-size: 2.2rem;
 }
 
 /* Larger than phablet */
@@ -570,16 +580,7 @@ img.about {
     display: inline-block;
 }
 
-#about p {
-    font-size: 1.6rem;
-    line-height: 150%;
-    text-align: center;
-    margin: auto;
-}
 
-#about h2 {
-    font-size: 2.2rem;
-}
 
 #about .seven.columns.panel {
     text-align: center;
@@ -613,6 +614,109 @@ section#about-2 {
     zoom: 1; /* solves it all for IE < 8, and doesn't hurt other browsers */
 }
 
+.slide {float:left;height: 100%;background-size: cover;background-repeat: no-repeat;background-position:center;}
+
+.slide-01 {background-image: url('../img/slide_01.jpg');}
+.slide-02 {background-image: url('../img/slide_02.jpg');}
+.slide-03 {background-image: url('../img/slide_03.jpg');}
+.slide-04 {background-image: url('../img/slide_04.jpg');}
+.slide-05 {background-image: url('../img/slide_05.jpg');}
+.slide-06 {background-image: url('../img/slide_06.jpg');}
+
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fp-slidesNav.bottom {
+    bottom: 17px;
+}
+.fp-slidesNav.top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+ }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+
+/* for all screens */
+#info {display: none;}
+
+/* only when orientation is in portrait mode */
+@media (orientation: portrait) {
+    #info {
+         display: block;
+    
+         width: 100%;
+         height: 100%;
+         background: transparent url('../img/rotate.png') center no-repeat;
+         background-size: 30%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1000;
+         opacity: 0.5;            
+}
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -688,7 +792,7 @@ there.
 	#about p,
 	#welcome h3 {font-size:2rem;margin:7% 0}
 
-	#download li a { max-height: none;}
+	#download li a { max-height: 50px;}
 
 	.videoWrapper {width: 100%;margin: 0;padding-left: 0;padding-right: 0;}
 
