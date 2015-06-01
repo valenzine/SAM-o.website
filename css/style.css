@@ -130,11 +130,9 @@ display: block;
 }
 
 .videoWrapper {
-	/* position: absolute; */
 	height: 0;
-	overflow: hidden;
+	/* overflow: hidden; */
 	padding-bottom: 56.25%;
-	position: relative;
 }
 .videoWrapper iframe {
 	position: absolute;
@@ -692,6 +690,9 @@ there.
 
 	#download li a { max-height: none;}
 
+	.videoWrapper {width: 100%;margin: 0;padding-left: 0;padding-right: 0;}
+
+	#video .inner {width:60%;margin:auto}
 
 }
 
