@@ -22,9 +22,9 @@
 				<div class="five columns u-pull-right">
 					<div class="inner verticalalign">
 						<h1 class="logo">SAM-o</h1>
-						<h2>The app with hundreds of thousands of faces in your pocket.</h2>
+						<h2>Zillions of new friends,<br/> in your pocket.</h2>
 						<div class="break"></div>
-						<h3>SAM-o is an awesome new app for managing your digital imaginary friends.</h3>
+						<h3>by Tomás García</h3>
 						<ul id="download">
 							<li><a href="#" class="ios">Download on the App Store</a></li>
 							<li><a href="#" class="android">Get it on Play Store</a></li>
@@ -34,16 +34,24 @@
 			</div>
 		</div>
 	</section>
+	<section id="video" class="panel">
+		<div class="inner verticalalign">
+			<div class="videoWrapper">
+				<iframe src="https://player.vimeo.com/video/131567605?title=0&byline=0&portrait=0&badge=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
 	<section id="about" class="panel">
 		<div class="container">
 			<div class="row">
-				<div class="seven columns">
+				<div class="six columns">
 					<img src="img/main-02.jpg" class="about verticalalign" alt="SAM-o">
 				</div>
-				<div class="five columns">
+				<div class="six columns">
 					<div class="inner verticalalign">
-						<h2>The app with hundreds of thousands of faces in your pocket.</h2>
-						<p>Meditation umami wayfarers Echo Park. Roof party Pinterest twee, messenger bag yr fap iPhone artisan. Lumbersexual chillwave drinking vinegar, Intelligentsia tofu gentrify craft beer swag locavore four loko retro Bushwick cred. Artisan dreamcatcher Helvetica cray, quinoa Schlitz squid try-hard PBR American Apparel.</p>
+						<h2>Discover hundreds of thousands of digital imaginary friends.</h2>
+						<p>This powerful friend randomizer generates a friend just for you, randomly, for your everyday needs, for your hourly needs! Feel the ultimate pleasure of discovering a new friend every time you use the app, be greeted by a wonderful and creative new face to lighten up your day or second! The hypnotic effect of having a new friend every second will leave you mesmerized.</p>
+						<p>Download the app and experience the stupid sexuality of SAM-o.</p>
 					</div>
 				</div>
 			</div>
@@ -51,6 +59,7 @@
 	</section>
 	<section id="crap" class="panel">
 	</section>
+
 	<section id="samples" class="panel">
 	</section>
 	<section id="gallery" class="panel">
@@ -62,24 +71,22 @@
 			<div class="slide slide-04"></div>
 			<div class="slide slide-05"></div>
 			<div class="slide slide-06"></div>
+			<div class="slide slide-07"></div>
+			<div class="slide slide-08"></div>
+			<div class="slide slide-09"></div>
 		</div>
 	</section>
-	<section id="video" class="panel">
-		<div class="inner verticalalign">
-			<div class="videoWrapper">
-				<iframe width="1254" height="705" src="https://www.youtube-nocookie.com/embed/DjjkAYI5kNM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</section>
+
 	<section id="footer" class="panel">
 		<div class="container">
 			<div class="row">
 				<div class="u-full-width columns">
 					<div class="inner verticalalign">
-						<div class="break"></div>
 						<h1 class="logo">SAM-o</h1>
-						<h2>@SAMOAPP</h2>
-						<h3>Created with love in Buenos Aires, Argentina.</h3>
+						<h2>Zillions of new friends, in your pocket.</h2>
+						<div class="break"></div>
+						<h3>@SAMOAPP</h3>
+						<h2>Created with love in Buenos Aires, Argentina by <a href="credits.html">this amazing team</a>.</h2>
 					</div>
 				</div>
 			</div>
@@ -108,11 +115,11 @@
 				}*/
 			});
 		};
-		
+
 		$( window ).resize(function() {
 			$('.columns,.panel').css('height', window.innerHeight+'px');
 		});
-		
+
 		$('.columns,.panel').css('height', window.innerHeight+'px');
 		$.breakpoint({
 			condition: function () {
@@ -132,7 +139,17 @@
 		});
 
 		init();
-		
+
 	});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52894505-4', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </html>
