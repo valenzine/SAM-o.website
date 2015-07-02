@@ -7,7 +7,13 @@
 	<title>SAM-o</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+	<meta property="og:title" content="SAM-o" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="ZILLIONS OF NEW FRIENDS, IN YOUR POCKET." />
+	<meta property="og:url" content="http://samoapp.com" />
+	<meta property="og:image" content="http://samoapp.com/img/fb.jpg" />
 </head>
 <body>
 
@@ -26,8 +32,8 @@
 						<div class="break"></div>
 						<h3>by Tomás García</h3>
 						<ul id="download">
-							<li><a href="#" class="ios">Download on the App Store</a></li>
-							<li><a href="#" class="android">Get it on Play Store</a></li>
+							<li><a href="https://itunes.apple.com/app/sam-o/id991955981" target="_blank" class="ios">Download on the App Store</a></li>
+							<li><a href="https://play.google.com/store/apps/details?id=com.samoapp.samo" class="android" target="_blank" >Get it on Play Store</a></li>
 						</ul>
 					</div>
 				</div>
@@ -37,7 +43,7 @@
 	<section id="video" class="panel">
 		<div class="inner verticalalign">
 			<div class="videoWrapper">
-				<iframe src="https://player.vimeo.com/video/131567605?title=0&byline=0&portrait=0&badge=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe src="https://player.vimeo.com/video/132244321?title=0&byline=0&portrait=0&badge=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
 		</div>
 	</section>
@@ -50,7 +56,7 @@
 				<div class="six columns">
 					<div class="inner verticalalign">
 						<h2>Discover hundreds of thousands of digital imaginary friends.</h2>
-						<p>This powerful friend randomizer generates a friend just for you, randomly, for your everyday needs, for your hourly needs! Feel the ultimate pleasure of discovering a new friend every time you use the app, be greeted by a wonderful and creative new face to lighten up your day or second! The hypnotic effect of having a new friend every second will leave you mesmerized.</p>
+						<p>This powerful friend randomizer generates a friend just for you, randomly, for your everyday needs, for your hourly needs!<br/>Feel the ultimate pleasure of discovering a new friend every time you use the app, be greeted by a wonderful and creative new face to lighten up your day or second! <br/>The hypnotic effect of having a new friend every second will leave you mesmerized.</p>
 						<p>Download the app and experience the stupid sexuality of SAM-o.</p>
 					</div>
 				</div>
@@ -85,8 +91,8 @@
 						<h1 class="logo">SAM-o</h1>
 						<h2>Zillions of new friends, in your pocket.</h2>
 						<div class="break"></div>
-						<h3>@SAMOAPP</h3>
-						<h2>Created with love in Buenos Aires, Argentina by <a href="credits.html">this amazing team</a>.</h2>
+						<h3><a href="https://twitter.com/samoapp">@samoapp</a> <a href="https://facebook.com/samoapp">/samoapp</a></h3>
+						<h2 class="createdby">Created with love in Buenos Aires, Argentina by <a href="credits.html">this amazing team</a>.</h2>
 					</div>
 				</div>
 			</div>
@@ -95,6 +101,7 @@
 
 </div>
 </body>
+<script src="js/modernizr.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
@@ -105,6 +112,7 @@
 			$('#fullpage').fullpage({
 				sectionSelector: '.panel',
 				slideSelector: '.slide',
+				slidesNavigation: true,
 				/*onLeave: function(index, nextIndex, direction){
 					var leavingSection = $(this);
 
